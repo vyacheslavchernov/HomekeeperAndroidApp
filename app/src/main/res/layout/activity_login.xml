@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        android:padding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="HomeKeeper"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MonthDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:alpha="0.5"
+            android:text="Для начала работы следует авторизоваться"
+            android:textAlignment="center"
+            android:textSize="19dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.dlyt.yanndroid.oneui.widget.RoundFrameLayout
+        android:id="@+id/detailedView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSecondaryContainer"
+        android:padding="24dp"
+        android:rotationY="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:roundedCorners="all|top_right|top_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/sesl_list_divider"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginBottom="24dp"
+                android:foregroundGravity="center_vertical|center_horizontal"
+                android:gravity="center_horizontal|center_vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="5dp"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/itemImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/textColorLinkInverse"
+                        android:padding="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_round_person_48"
+                        app:tint="@android:color/white" />
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/loginTextView"
+                    style="@style/Theme.Homekeeper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="Логин"
+                    android:inputType="textPersonName|textAutoComplete"
+                    android:minHeight="48dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginBottom="24dp"
+                android:foregroundGravity="center_vertical|center_horizontal"
+                android:gravity="center_horizontal|center_vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="24dp"
+                    android:padding="5dp"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/roundedImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/textColorLinkInverse"
+                        android:padding="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_round_lock_open_48"
+                        app:tint="@android:color/white" />
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/passwordTextView"
+                    style="@style/Theme.Homekeeper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="Пароль"
+                    android:inputType="textPassword|textAutoComplete"
+                    android:minHeight="48dp" />
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </de.dlyt.yanndroid.oneui.widget.RoundFrameLayout>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="248dp"
+        android:layout_height="65dp"
+        android:text="Авторизоваться"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

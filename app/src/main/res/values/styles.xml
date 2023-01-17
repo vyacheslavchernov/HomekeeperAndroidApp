@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Homekeeper" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="android:statusBarColor">?android:attr/windowBackground</item>
+        <item name="android:windowLightStatusBar">?android:isLightTheme</item>
+    </style>
+</resources>
